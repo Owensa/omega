@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="OMEGA offers cryptocurrency mining services on modern, high-efficiency equipment. .">
+    <meta name="author" content="Mosaddek">
+
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <title>OMEGA Cloud Mining</title>
+
+    <!--google fonts-->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="assets/vendor/Sonorous/Sonorous.otf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    
+    <!--common style-->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/bicon/css/bicon.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css" rel="stylesheet">
+    <link href="assets/vendor/owl/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/pricing.css" rel="stylesheet">    
+				<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,700,900&amp;subset=latin,latin-ext">
+    
+
+    <!--custom css-->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<body class="">
+
+    
+                        <!-- login modal -->
+                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!--login form-->
+                                        <div class="login-form p-5">
+                                            <h4 class="text-uppercase mt-0 text-purple-color text-center mb-5">Login</h4>
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                                                </div>
+
+                                                <div class="form-group clearfix">
+                                                    <a href="#" class="float-left forgot-link my-2">Forgot Password ?</a>
+                                                    <a href="dash/dashboard.html" class="btn btn-purple float-right">LOGIN</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!--/login form-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--login modal-->
+    
+    
+    
+                        <!-- register modal -->
+                    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="row no-gutters">
+                                    <div class="col-md-12">
+                                        <!--register form-->
+                                        <div class="login-form p-5">
+                                            <h4 class="text-uppercase mt-0 text-purple-color text-center mb-5">Register</h4>
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="inputUser10" placeholder="Full Name">
+                                                </div>                                       
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="inputUser10" placeholder="E-mail">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <input type="password" class="form-control" id="InputPassword10" placeholder="Password">
+                                                </div>
+                                                <div class="form-group mb-4">
+                                                    <input type="password" class="form-control" id="confirmPassword10" placeholder="Confirm Password">
+                                                </div>
+
+                                                <div class="form-group clearfix">
+                                                    <button type="submit" class="btn btn-purple float-right">Register</button>
+                                                </div>
+
+                                                <div class="text-center mt-5">
+                                                    Already have an account?
+                                                 <a href="javascript:;" class="text-purple-color text-capitalize f12" data-toggle="modal" data-target="#loginModal">Login</a>                    
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!--/register form-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--register modal-->
+    
+    
+    
+    
+    
+<!--header start-->
+<header class="app-header navbar-orange">
+    <div class="container2">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-md" id="mainNav">
+                    <!--logo-->
+                    <a class="navbar-brand mr-5" href="index.html">
+                        <img class="" src="assets/img/omegacmd.png" srcset="assets/img/omegacmd.png 2x" alt=""/>
+                        
+                    </a>
+                    <!--logo-->
+
+                    <!--responsive toggle icon-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <i class="fa fa-bars"> </i>
+                        </span>
+                    </button>
+                    <!--responsive toggle icon-->
+
+                    <!--nav link-->
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://blog.minemy.co/">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item2">
+                                 <a href="javascript:;" class="nav-link btn btn-pill login-token js-scroll-trigger" data-toggle="modal" data-target="#loginModal">Log In</a>
+                            </li>
+                            
+                    
+                        </ul>
+                    </div>
+                    <!--nav link-->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--header end-->
+<body>
+<!--banner start-->
+<div class="hero-banner creative-banner" id="home">
+    
+        <div id="particles-js"></div>
+    
+    <div class="bubble-set">
+        <div class="bubble-lg"></div>
+        <div class="bubble-md"></div>
+        <div class="bubble-sm"></div>
+    </div>
+
+
+
+    <div class="hero-text ">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-10 col-md-12">
+                    <h1 class="res"><span style="color: #ffffff;">Hive Mining</span>
+                        <div id="typed-strings">
+                            <p>for anyone</p>
+                            <p>at anytime</p>
+                            <p>in any place</p>
+                        </div>
+                        <span id="typed"></span>
+                        </h1>
+                 
+                    <div class="container">
+                        <div class="text"></div>
+                    </div>
+                    
+                    <p class="here-sub-title wow fadeInUp text-light" data-wow-delay=".3s">
+                        Accessing cryptocurrency has never been easier. OMEGA allows you to start earning your first coins on the internet today!
+                    </p>
+                    <div class="mb-3 mb-lg-3">
+                        <a href="What%20is%20Bitcoin%20Mining.mp4" class="btn btn-gradient btn-pill text-uppercase mr-3 mb-3 popup-youtube wow fadeInUp" data-wow-delay=".4s">See How OMEGA Works<i class="fa fa-play-circle pl-2"></i></a>                   
+                        <a href="javascript:;" data-toggle="modal" data-target="#registerModal" class="btn btn-white btn-pill mb-3 text-uppercase wow fadeInUp" data-wow-delay=".5s">Register Now</a>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 wow zoomIn" data-wow-delay=".6s">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-footer" style="background-image: url('assets/img/banner-curve.png')"></div>
+</div>
+<!--banner end-->
+
+    
+<!--section start-->
+
+<div id="token">
+    <!--section start-->
+    <section class="section-gap">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-5 col-md-12 col-gap mb-md-0 mb-3">
+                    <div class="row text-center mb-lg-0 mb-5">
+                        <div class="col-6 mt-lg-5 pt-lg-5 mt-0 pt-0">
+                            <div class="row">
+                                <div class="col-12 mb-4">
+                                    <div class="card box-show py-md-5 wow fadeInUp" data-wow-delay=".2s">
+                                        <div class="card-body">
+                                            <h3 class="text-paste-color">1,400TH/s</h3>
+                                            <p class="mb-0">Bitcoin Hashpower</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card box-show py-md-5 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="card-body">
+                                            <h3 class="text-paste-color">10GH/s</h3>
+                                            <p class="mb-0">Ethereum Hashpower</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12 mb-4">
+                                    <div class="card box-show py-md-5 wow fadeInUp" data-wow-delay=".4s">
+                                        <div class="card-body">
+                                            <h3 class="text-paste-color">64KH/s</h3>
+                                            <p class="mb-0">Monero Hashpower</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card box-show py-md-5 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="card-body">
+                                            <h3 class="text-paste-color">66KSol/s</h3>
+                                            <p class="mb-0">ZCash Hashpower</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-gap">
+                    <h2 class="mb-md-5 wow fadeInUp" data-wow-delay=".2s">omega Cloud Mining Operations</h2>
+
+                    <p class="wow fadeInUp" data-wow-delay=".3s"> Your mining rigs are already up and running.
+As soon as you’ve set-up your account with us you can start earning your first coins from our crypto cloud mining service!</p>
+                    <div class="row">
+                        <div class="col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                            <h5 class="text-purple-color">We Mine For You</h5>
+                            <p class="mb-3">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest cryptocurrency mining hardware running for you already!</p>
+                            <ul class="list-unstyled">
+                                <li>- Real hashpower to choose from</li>
+                                <li>- Cheap electricity rates</li>
+                                <li>- Low maintenance fees</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <h5 class="text-paste-color">Transparency is key</h5>
+                            <p class="mb-3">At OMEGA, we understand the importance of trust as a major factor in any purchase or investment. Unlike many other cloud service providers, we intend to use transparency in regards to our real hashpower as one of the key things that separate us from the crowd. From timestamped Instagram posts, to communicating with the community through Reddit and BitcoinTalk, we want our users to feel assured that money they put in are being invested directly into miners that are truly mining for them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section end-->
+</div>
+
+
+    <!--section start-->
+    <section class="section-gap road-map-bg">
+        <div class="container">
+            <!--section title-->
+            <div class="row text-center">
+                <div class="col-12">
+                    <div class="section-title">
+                        <g2 class=" wow fadeInUp" data-wow-delay=".2s">How (most) Cryptocurrency Mining Works</g2>
+                        <p class=" wow fadeInUp" data-wow-delay=".3s"> The production of cryptocurrencies isn't anything like that of regular money</p>
+                    </div>
+                </div>
+            </div><!--section title-->
+            <div class="row d-flex align-items-center wow fadeInUp" data-wow-delay=".4s">
+                <div class="col-md-12 col-gap">
+                    <div class="owl-carousel owl-theme js_steps_carousel steps-shadow">
+                        <div class="row" >
+                            <div class="col-md-12" data-dot="<i class='bi bi-bond'></i> ">
+                                <div class="steps-content text-dark">
+                                    <g3 class="mb-md-3">Request for Transaction</g3>
+                                    <p>Someone requests to send cryptocurrency through the network. They input the amount they want to send along with a transaction fee they wish to pay.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12" data-dot="<i class='bi bi-server'></i>">
+                                <div class="steps-content text-dark">
+                                    <g3 class="mb-md-3">The Request is broadcast to all miners in the network</g3>
+                                    <p> The transaction is sent and bundled as part of a block (which include many other transactions as well) and broadcasted to the network to be verified or 'mined'.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12" data-dot=" <i class='bi bi-target-arrow'></i> ">
+                                <div class="steps-content text-dark">
+                                    <g3 class="mb-md-3">Miners jointly validate the transaction</g3>
+                                    <p>They take the 'blocks' or lumpsum of transactions, verify them as legitimate through mathematical operations using an algorithm and spread them in the network.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12" data-dot="<i class='bi bi-finger-print'></i> ">
+                                <div class="steps-content text-dark">
+                                    <g3 class="mb-md-3">Confirmations</g3>
+                                    <p>Once the transaction has been "mined" or verified, it is broadcast on the network or 'blockchain' and considered completed. Transaction are 'reconfirmed' to ensure validity. <br> <br>
+                                        Miners are given newly minted cryptocurrency as a reward for this work (until there are no more coins left to mint otherwise known as a hard cap, at that point miners are given the necessary transaction fees to collect).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12" data-dot="<i class='bi bi-hand'></i>">
+                                <div class="steps-content text-dark">
+                                    <g3 class="mb-md-3">Transaction complete. Block is added permanently to the blockchain.</g3>
+                                    <p>After a few confirmations, the transaction is considered irreversible and complete. At this point the block is added to the network or 'blockchain' and this process goes on and on.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section end-->
+
+
+
+<!--section start-->
+<section class="section-gap section-gray-bg">
+    <div class="container">
+        <div class="row d-flex align-items-center mb-lg-5 mb-md-3 pb-lg-5 pb-0">
+            <div class="col-md-7 col-gap">
+                <h6 class="wow fadeInUp pre-title ls2" data-wow-delay=".15s">NO SHORTCUTS-</h6>
+                <h2 class="mb-md-5 text-purple-color wow fadeInUp" data-wow-delay=".2s">Modern Hardware, Proper Infrastructure</h2>
+                <p class=" wow fadeInUp" data-wow-delay=".3s">Our facilities uses the latest and greatest hardware to ensure maximum profitability and minimum energy consumption. Our infrastructure set up allows us to host these miners appropriately in accordance with proper cooling, ventillation, stable connection and clean power delivery. </p>
+                <a href="javascript:;" class="btn btn-purple btn-pill text-uppercase wow fadeInUp" data-wow-delay=".4s">Pricing</a>
+            </div>
+            <div class="col-md-5 col-gap wow fadeInUp" data-wow-delay=".5s">
+                <img class="my-5" src="assets/img/art3.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="row d-flex align-items-center">
+            <div class="col-md-7 col-gap ">
+                <h6 class="wow fadeInUp  pre-title ls2" data-wow-delay=".15s">FOUNDATION FOR THE FUTURE-</h6>
+                <h2 class="text-paste-color mb-md-5 wow fadeInUp" data-wow-delay=".2s">Scalable Infrastructure for the Future</h2>
+                <p class=" wow fadeInUp" data-wow-delay=".3s">With very large backing, 0% taxes, low electricity costs, state of the art hardware and large infrastructure and facilities to boot, we have a very excellent foundation to start one of the best cloud mining facilities out there!</p>
+            </div>
+            <div class="col-md-5 col-gap mb-md-0 mb-3 order-md-first">
+                <div class="wow fadeInUp" data-wow-delay=".35s">
+                    <img src="assets/img/art4.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section end-->
+
+<!--section start-->
+<section class="section-gap feature-gradient pb-0">
+    <div class="container">
+        <!--section title-->
+        <div class="row text-center justify-content-md-center">
+                <div class="section-title">
+                    <m3 class="wow fadeInUp mb-lg-3" data-wow-delay=".2s">Your wallet, your control</m3>
+                    <p class="wow fadeInUp" data-wow-delay=".3s"> We put the 'decentralized' in your cloud mining wallet. </p>
+                </div>
+            </div>
+        </div><!--section title-->
+        <div class="row">
+            <div class="col-md-6 col-gap wow fadeInUp" data-wow-delay=".3s">
+                <p>In case you haven't heard, centralised exchanges have been the subject of hacks, thefts and grave errors since the first MtGox scandal in 2011. Over $1 billion worth of crypto has been reported stolen at the hands of exchanges. 
+We never take custody of your wallet, so users are immune to these catastrophes. Your funds are sent to your own external wallet at all times. </p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-ellipsis-horizontal pr-2"></i>Easy access to your wallet</li>
+                    <li><i class="bi bi-ellipsis-horizontal pr-2"></i>No extra fees</li>
+                    <li><i class="bi bi-ellipsis-horizontal pr-2"></i>Export your respective public and private keys</li>
+                    <li><i class="bi bi-ellipsis-horizontal pr-2"></i>Easy deposit and withdrawal of cryptocurrencies</li>
+                    <li><i class="bi bi-ellipsis-horizontal pr-2"></i>Secure trading and transactions</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 col-gap wow fadeInUp" data-wow-delay=".6s">
+                <img src="assets/img/app-img.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section end-->
+
+<div id="login" class=" wow fadeInUp" data-wow-delay=".2s">
+    <!--registration section start-->
+    <section class="signin-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="javascript:;" class="registration-bg" data-toggle="modal" data-target="#registerModal">
+                        <span class="title">Register</span>
+                        <p>Start earning your first coins today</p>
+                    </a>
+
+
+                    <a href="javascript:;" class="login-bg" data-toggle="modal" data-target="#loginModal">
+                        <span class="title">Sign In</span>
+                        <p>Access your mining dashboard</p>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--registration section end-->
+</div>
+
+    <br>
+    
+    <br>
+    
+    <br>
+    
+    <br>
+    
+    <br>
+    
+    <br>
+    
+<!--footer start-->
+<footer class="app-footer">
+    <div class="primary-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-md-0 mb-3 wow fadeInUp" data-wow-delay=".3s">
+                    <v6 class="text-uppercase">Resources</v6>
+                    <ul class="list-unstyled">
+                        <li><a href="javascript:;">Terms & Conditions</a></li>
+                        <li><a href="javascript:;">Privacy Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay=".4s">
+                    <v6 class="text-uppercase">About & Contacts</v6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="javascript:;">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="secondary-footer text-md-left text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-md-0 mb-3">
+                    <div class="payment-cards wow fadeInUp" data-wow-delay=".45s">
+                        <img src="assets/img/fc1.png" alt=""/>
+                        <img src="assets/img/fc2.png" alt=""/>
+                        <img src="assets/img/fc3.png" alt=""/>
+                        <img src="assets/img/fc4.png" alt=""/>               
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-right wow fadeInUp" data-wow-delay=".5s">
+                    <div class="float-md-right  mb-md-0 mb-3">
+                        <span class="sm-txt pr-2">Language:</span>
+                        <div class="btn-group ">
+                            <button type="button" class="btn-language dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                English
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item" type="button">English</button>
+                                <button class="dropdown-item" type="button">French</button>
+                                <button class="dropdown-item" type="button">Chinese</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links float-md-right">
+                        <a href="javascript:;"><i class="fa fa-instagram"></i></a>
+                        <a href="javascript:;"><i class="fa fa-twitter"></i></a>              
+                        <a href="javascript:;"><i class="fa fa-bitcoin"></i></a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+
+<!--js initialized-->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/popper.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/vendor/wow.min.js"></script>
+<script src="assets/vendor/jquery.easing.min.js"></script>
+<script src="assets/vendor/owl/owl.carousel.min.js"></script>
+<script src="assets/vendor/jquery.countdown.min.js"></script>
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/vendor/particles/particles.js"></script>
+<script src="assets/vendor/particles/init-particles.js"></script>
+
+<!--contact form-->
+<script type="text/javascript" src="assets/vendor/contact-form/form-validator.min.js"></script>
+<script type="text/javascript" src="assets/vendor/contact-form/contact-form-script.js"></script>
+
+<!--init scripts-->
+<script src="assets/js/scripts.js"></script>
+<script src="lib/typed.js"></script>
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+      loop: true,
+        typeSpeed: 50,
+              startDelay: 500,
+      backDelay: 5000,
+      loopcount: Infinity,
+      backSpeed: 100,
+  });
+</script>
+</body>
+</html>

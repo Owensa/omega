@@ -1,0 +1,177 @@
+.pricing-tabs {
+    background: #FFF;
+    margin-left: -25px;
+    padding: 25px !important;
+}
+@media all and (min-width: 981px) {
+    .pricing-tabs {
+        width: calc(100% + 10.6%) !important;
+    }
+}
+@media all and (max-width: 980px) {
+    .pricing-tabs {
+        width: calc(100% + 50px) !important;
+    }
+}
+.pricing-tabs .et_pb_tabs_controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: -5px;
+}
+.pricing-tabs .et_pb_tabs_controls li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-preferred-size: 120px;
+    flex-basis: 120px;
+    height: 120px;
+    padding: 70px 0 0;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    margin: 5px;
+}
+.pricing-tabs .et_pb_tabs_controls li a {
+    font-size: 90%;
+    padding: 0;
+    font-weight: 400;
+    color: #AAA;
+    text-align: center;
+    width: 100%;
+}
+.pricing-tabs .et_pb_tabs_controls li:hover,
+.pricing-tabs .et_pb_tabs_controls .et_pb_tab_active {
+    background: #199CDB;
+}
+.pricing-tabs .et_pb_tabs_controls li:hover a,
+.pricing-tabs .et_pb_tabs_controls .et_pb_tab_active a {
+    color: #FFF !important;
+}
+.pricing-tabs .et_pb_tabs_controls li a:before {
+    font-family: 'Vehicles';
+    font-size: 60px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+}
+.pricing-tabs .et_pb_tab_0 a:before { content: '\62'; }
+.pricing-tabs .et_pb_tab_1 a:before { content: '\63'; }
+.pricing-tabs .et_pb_tab_2 a:before { content: '\65'; }
+.pricing-tabs .et_pb_tab_3 a:before { content: '\6a'; }
+.pricing-tabs .et_pb_tab_4 a:before { content: '\67'; }
+.pricing-tabs .et_pb_tab_5 a:before { content: '\6b'; }
+ 
+ 
+ 
+.pricing-tabs .et_pb_tab {
+    padding: 25px 0 0;
+}
+.pricing-tabs .et_pb_pricing_table_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    margin: 10px -10px;
+}
+.pricing-tabs .et_pb_pricing_table {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-preferred-size: 180px;
+    flex-basis: 180px;
+    border-color: #DDD;
+    margin: 10px !important;
+    padding: 20px 15px 75px;
+}
+@media all and (max-width: 980px) {
+    .pricing-tabs .et_pb_pricing_table {
+        -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+    }
+}
+.pricing-tabs .et_pb_pricing_heading {
+    background: transparent;
+}
+.pricing-tabs .et_pb_pricing_heading h2 {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+}
+.pricing-tabs .et_pb_pricing_heading span {
+    font-size: 16px;
+    color: #AAA;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    -webkit-transform: translateY(80px);
+        -ms-transform: translateY(80px);
+            transform: translateY(80px);
+    padding: 10px 0;
+}
+.pricing-tabs .et_pb_pricing_heading span:before {
+    content: '}';
+    font-family: 'ETmodules';
+    margin-right: 5px;
+    font-weight: bold;
+}
+.pricing-tabs .et_pb_pricing_content_top {
+    border: none;
+    -webkit-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+            transform: translateY(-50px);
+    padding-bottom: 10px;
+}
+.pricing-tabs .et_pb_dollar_sign {
+    font-size: 22px;
+    margin: 0 !important;
+}
+.pricing-tabs .et_pb_sum {
+    font-size: 38px;
+    font-weight: 100;
+    margin-left: 15px;
+}
+.pricing-tabs .et_pb_dollar_sign,
+.pricing-tabs .et_pb_sum {
+    color: #199CDB;
+}
+.pricing-tabs .et_pb_pricing_content {
+    padding: 30px 0;
+    text-align: center;
+}
+.pricing-tabs .et_pb_pricing li {
+    padding: 0 0 10px;
+}
+.pricing-tabs .et_pb_button {
+    position: absolute;
+    bottom: 30px;
+    width: 120px;
+    margin-left: -60px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    color: #199CDB;
+    border-radius: 25px;
+}
+.pricing-tabs .et_pb_button:after {
+    display: none;
+}
+.pricing-tabs .et_pb_button:hover {
+    background: #199CDB;
+    color: #FFF;
+    border: 2px solid #199CDB;
+    padding: 0.3em 1em;
+}

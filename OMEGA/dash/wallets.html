@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>minemy Wallet Configuration</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/style-dashboard-light.css">    
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/utils.js"></script>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+	</style>
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="#0" class="cd-logo"><img src="img/yeko.png" alt="Logo"></a>
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+				<li><a href="#0">FAQ</a></li>
+				<li class="has-children account">
+					<a href="#0">
+						<img src="img/cd-avatar.png" alt="avatar">
+						User
+					</a>
+
+					<ul>
+
+						<li><a href="#0">My Account</a></li>
+						<li><a href="#0">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+
+	<main class="cd-main-content">
+		<nav class="cd-side-nav">
+			<ul>
+				<li class="cd-label">Main</li>
+				<li class="has-children">
+					<a href="dashboard.html">Home</a>
+				</li>
+				<li class="has-children notifications active">
+					<a>Payouts<span class="count">3</span></a>
+					
+					<ul>
+						<li><a href="payouthistory.html">Payouts History</a></li>
+						<li><a href="wallets.html" >Configure Wallets</a></li>
+					</ul>
+				</li>
+
+				<li class="has-children comments">
+					<a href="allocation.html">Mining Allocation</a>
+				</li>
+			</ul>
+
+			<ul>
+				<li class="cd-label">Support</li>
+				<li class="has-children bookmarks">
+					<a href="orders.html">My Orders</a>
+					
+				</li>
+				<li class="has-children users">
+					<a href="contact.html">Contact us</a>
+					
+				</li>
+			</ul>
+
+		</nav>
+
+		<div class="content-wrapper">
+         <div class="page">
+	<div class="content address_editor">
+				<div class="col_1_2">
+					<div class="row">
+						<h2>Configure Wallets</h2>
+
+					</div>
+					<div class="box_table">
+						<table id="wallet_table">
+							<tbody><tr>
+								<th class="tag-width">Tag</th>
+								<th class="rmv2">Wallet address</th>
+								<th class="width-actions">Actions</th>
+							</tr>
+							<tr data-tag="">
+								<td class="tag-width">
+									<div class="input_tag_wallet">
+										<div class="tag wallet">WALLET:</div>
+										<input type="text" value="BTC">
+									</div>
+									<div class="shw2">
+										<div class="input_address">
+											<input type="text" value="sample">
+											<div style="display:block;" class="button orange">Add</div>
+											<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+										</div>
+									</div>
+								</td>
+								<td class="rmv2">
+									<div class="input_address">
+										<input type="text" value="">
+										<div style="display: block;" class="button orange">Save</div>
+										<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+									</div>
+								</td>
+								<td class="width-actions"></td>
+							</tr>
+						<tr data-tag="WALLET:ETH">
+											<td class="tag-width">
+												<div class="input_tag_wallet">
+													<div class="tag wallet">WALLET:</div>
+													<input type="text" value="ETH">
+												</div>
+												<div class="shw2">
+													<div class="input_address">
+														<input type="text" value="sample">
+														<div class="button blue" style="display: block;">Save</div>
+														<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+													</div>
+												</div>
+											</td>
+											<td class="rmv2">
+												<div class="input_address">
+													<input type="text" value="sample">
+													<div class="button blue" style="display: block;">Save</div>
+													<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+												</div>
+											</td>
+											<td class="width-actions">
+												<div data-tooltip="Delete" class="icon bin" onclick="removeTag('WALLET:ETH')"></div>
+											</td>
+										</tr><tr data-tag="WALLET:XMR">
+											<td class="tag-width">
+												<div class="input_tag_wallet">
+													<div class="tag wallet">WALLET:</div>
+													<input type="text" value="XMR">
+												</div>
+												<div class="shw2">
+													<div class="input_address">
+														<input type="text" value="sample">
+														<div class="button green" style="display: block;">Save</div>
+														<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+													</div>
+												</div>
+											</td>
+											<td class="rmv2">
+												<div class="input_address">
+													<input type="text" value="sample">
+													<div class="button red" style="display: block;">Save</div>
+													<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+												</div>
+											</td>
+											<td class="width-actions">
+												<div data-tooltip="Delete" class="icon bin" onclick="removeTag('WALLET:XMR')"></div>
+											</td>
+										</tr><tr data-tag="WALLET:LTC">
+											<td class="tag-width">
+												<div class="input_tag_wallet">
+													<div class="tag wallet">WALLET:</div>
+													<input type="text" value="LTC">
+												</div>
+												<div class="shw2">
+													<div class="input_address">
+														<input type="text" value="sample">
+														<div class="button gray" style="display: block;">Save</div>
+														<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+													</div>
+												</div>
+											</td>
+											<td class="rmv2">
+												<div class="input_address">
+													<input type="text" value="sample">
+													<div class="button gray" style="display: block;">Save</div>
+													<div class="loader_width"><div class="circle-loader"><div class="checkmark draw"></div></div></div>
+												</div>
+											</td>
+											<td class="width-actions">
+												<div data-tooltip="Delete" class="icon bin" onclick="removeTag('WALLET:LTC')"></div>
+											</td>
+										</tr>						</tbody></table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="popupbackground close_popup"></div>
+		<div class="popup" id="tag_delete">
+			<div class="close"></div>
+			<div class="title"></div>
+			<div class="text"><div class="icon warning"></div><p>Before deleting this tag, please make sure that it's no longer in use in your configurations.</p></div>
+			<div class="action_row">
+				<div class="circle-loader">
+				  <div class="checkmark draw"></div>
+				</div>
+				<div class="message_suc">Finished</div>
+				<div class="message_err">Error</div>
+				<div class="outlined_button gray close_popup">No, keep it</div>
+				<div class="button red">Yes, delete it</div>
+			</div>
+		</div>
+		
+		<input type="hidden" id="nonce" value="f6d97b229000b8309bcbab32aad2e968e976938b61ce4b6ddf5590e13c5a9838">
+
+		</div> <!-- .content-wrapper -->
+	</main> <!-- .cd-main-content -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="path/to/chartjs/dist/Chart.js"></script>
+<script>
+    var myChart = new Chart(ctx, {...});
+</script>    
+</body>
+</html>
