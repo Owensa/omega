@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Contact omega</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="img/icon.png">    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/payouthistory.css"> <!-- Resource style -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="contactcss/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="contactcss/style.css"> <!-- Resource style -->
+	<script src="contactjs/modernizr.js"></script> <!-- Modernizr -->
+    
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+	</style>
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="#0" class="cd-logo"><img src="img/yeko.png" alt="Logo"></a>
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+				<li><a href="#0">FAQ</a></li>
+				<li class="has-children account">
+					<a href="#0">
+						<img src="img/cd-avatar.png" alt="avatar">
+						User
+					</a>
+
+					<ul>
+
+						<li><a href="#0">My Account</a></li>
+						<li><a href="#0">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+
+	<main class="cd-main-content">
+		<nav class="cd-side-nav">
+			<ul>
+				<li class="cd-label">Main</li>
+				<li class="has-children overview">
+					<a href="dashboard.html">Home</a>
+				</li>
+				<li class="has-children notifications active">
+					<a>Payouts<span class="count">3</span></a>
+					
+					<ul>
+						<li><a href="payouthistory.html">Payouts History</a></li>
+						<li><a href="wallets.html" >Configure Wallets</a></li>
+					</ul>
+				</li>
+
+				<li class="has-children comments">
+					<a href="allocation.html">Mining Allocation</a>
+				</li>
+			</ul>
+
+			<ul>
+				<li class="cd-label">Support</li>
+				<li class="has-children bookmarks">
+					<a href="orders.html">My Orders</a>
+					
+				</li>
+				<li class="has-children users">
+					<a href="contact.html">Contact us</a>
+					
+				</li>
+			</ul>
+
+		</nav>
+
+		<div class="content-wrapper">
+
+
+	<form class="cd-form floating-labels">
+		<fieldset>
+			<legend>Contact Information</legend>
+
+			<div class="">
+				<p></p>
+			</div>
+
+			<div class="icon">
+				<label class="cd-label" for="cd-name">Name</label>
+				<input class="user" type="text" name="cd-name" id="cd-name" required>
+		    </div> 
+
+
+		    <div class="icon">
+		    	<label class="cd-label" for="cd-email">Email</label>
+				<input class="email" type="email" name="cd-email" id="cd-email" required>
+		    </div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Subject</legend>
+
+			<div>
+				<h4>Topic</h4>
+
+				<p class="cd-select icon">
+					<select class="budget">
+						<option value="0">Select Topic</option>
+						<option value="1">Missing Payouts</option>
+						<option value="2">Order Inquiry</option>
+						<option value="3">Other</option>                        
+						<option value="4">Press</option>
+					</select>
+				</p>
+			</div> 
+
+			<div class="icon">
+				<label class="cd-label" for="cd-textarea">Your message</label>
+      			<textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+			</div>
+
+			<div>
+		      	<input type="submit" value="Send Message">
+		    </div>
+		</fieldset>
+	</form>
+
+            
+		</div> <!-- .content-wrapper -->
+	</main> <!-- .cd-main-content -->
+<script src="contactjs/main.js"></script> <!-- Resource jQuery -->    
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="path/to/chartjs/dist/Chart.js"></script>
+<script>
+    var myChart = new Chart(ctx, {...});
+</script>    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</body>
+</html>

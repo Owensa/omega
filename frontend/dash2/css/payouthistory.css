@@ -51,7 +51,7 @@ Main Page Content
 .cd-main-content .content-wrapper h1 {
     font-family: "Varela Round", sans-serif;    
   text-align: center;
-  padding: 1em 0 0 0;
+  padding: 0     0 0 0;
   font-size: 2rem;
 }
 .cd-main-content::before {

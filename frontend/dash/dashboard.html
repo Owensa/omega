@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|KoHo|Open+Sans+Condensed:300|Roboto|Sunflower:300" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->    
@@ -85,28 +87,36 @@
 		</nav>
 
 		<div class="content-wrapper">
+            <br>
         <div class='Charts-parent'>
-            <div class="Charts-child">             
+
+            <div class="Charts-child"> 
+                                        <div class="flex-container"> 
             <h1>Your Daily Payout</h1>
             <br>                
-                
+               
             <k2>est.</k2><k1>$1,065.00</k1>
+                                            </div>  
             </div>
-            <div class="Charts-child">  
+            <div class="Charts-child">
+                                                        <div class="flex-container"> 
+                            <br> <f1>Breakdown</f1> <br><br>  
                 <canvas id="myDoughnutChart"></canvas>           
-            </div>             
-    	</div>
-<br>       
+            </div>   
+        </div> 
+                    </div> 
+ 
+            <br>              
         <div class='Charts-parent'>
             <div class="Charts-child">
-            <f1>Past Earnings</f1>    
+                                                        <div class="flex-container2"> 
+            <f1>Past Earnings</f1>                    
                    <br> 
                    <br> 
-		      <canvas id="timelineChart" ></canvas>     
+		      <canvas id="timelineChart" ></canvas>   
+           </div>                                                            
             </div>         
-
-	</div>
-        
+	       </div>   
         
         
 	<script>
@@ -135,8 +145,8 @@
 				],
 				datasets: [{
 					label: 'USD Earnings',
-					backgroundColor: color(window.chartColors.red).alpha(1.5).rgbString(),
-					borderColor: window.chartColors.blue,
+					backgroundColor: color(window.chartColors.yellow).alpha(1.5).rgbString(),
+					borderColor: window.chartColors.yellow,
 					fill: false,
 					data: [
 						randomScalingFactor(),
@@ -151,13 +161,19 @@
 			},
 			options: {
 				title: {
-					text: 'Chart.js Time Scale'
+					text: 'Past Earnings',
+                    display: false,
+                    fontColor: '#fff'
 				},
                  legend: {
                     display: false
                  },                
 				scales: {
 					xAxes: [{
+                        gridLines: {
+                            display: true,
+                            color: 'rgba(256,256,256,0.2)'
+                        },                     
 						type: 'time',
 						time: {
 							format: timeFormat,
@@ -165,15 +181,32 @@
 							tooltipFormat: 'll HH:mm'
 						},
 						scaleLabel: {
-							display: false,
-							labelString: 'Date'
-						}
+							display: true,
+							labelString: 'Date',
+                            fontColor: '#ffffff'                            
+						},
+                        ticks: {
+							display: true,
+                            fontColor: '#ffffff',
+                            fontFamily: 'Varela Round'
+						}                       
 					}],
 					yAxes: [{
-						scaleLabel: {
+                        gridLines: {
+                            display: true,
+                            color: 'rgba(256,256,256,0.2)'
+                        },   
+                        scaleLabel: {
 							display: true,
-							labelString: 'value'
+							labelString: 'USD',
+                            fontColor: '#ffffff'
+						},
+                        ticks: {
+							display: true,
+                            fontColor: '#ffffff',
+                            fontFamily: 'Varela Round'
 						}
+                        
 					}]
 				},
 			}
@@ -213,6 +246,12 @@
         }]
     },
     options: {
+                        legend: {
+							display: true,
+                            labels: {
+                                fontColor: '#ffffff'
+						},
+    },        
     }
 });         
 </script>            

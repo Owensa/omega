@@ -3,7 +3,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>minemy Dashboard</title>
+	<title>omega Dashboard</title>
+        <link rel="icon" 
+      type="image/png" 
+      href="img/icon.png">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -85,16 +88,15 @@
         <div class='Charts-parent'>
             <div class="Charts-child">             
             <h1>Your Daily Payout</h1>
-            <br>   
-                <br>                
-                            <k2>$</k2><k1>1,065.00</k1>
+            <br>                
+                
+            <k2>est.</k2><k1>$1,065.00</k1>
             </div>
             <div class="Charts-child">  
-                   <br> 
-                   <br> 
                 <canvas id="myDoughnutChart"></canvas>           
             </div>             
-    	</div>  
+    	</div>
+<br>       
         <div class='Charts-parent'>
             <div class="Charts-child">
             <f1>Past Earnings</f1>    
@@ -133,8 +135,8 @@
 				],
 				datasets: [{
 					label: 'USD Earnings',
-					backgroundColor: 'rgba(255, 255, 255,1)',
-					borderColor: 'rgba(255, 236, 202,0.7)',
+					backgroundColor: color(window.chartColors.red).alpha(1.5).rgbString(),
+					borderColor: window.chartColors.blue,
 					fill: false,
 					data: [
 						randomScalingFactor(),
@@ -149,12 +151,13 @@
 			},
 			options: {
 				title: {
-					text: 'Chart.js Time Scale'
+					text: 'Past Earnings',
+                    display: false,        
+                    fontColor: '#fff'                    
 				},
                  legend: {
                     display: false
-                 },   
-            
+                 },                
 				scales: {
 					xAxes: [{
 						type: 'time',
@@ -165,25 +168,23 @@
 						},
 						scaleLabel: {
 							display: true,
-							labelString: 'Date',
-                            fontColor: 'rgba(255, 255, 255,1)'                            
+							labelString: 'Date'
 						},
-                        gridLines: {
-                              display: false ,
-                              color: "rgba(255, 236, 202,1)"
-                            }                        
+                        ticks: {
+							display: true,
+                            fontFamily: 'Varela Round'
+						}                                 
 					}],
 					yAxes: [{
 						scaleLabel: {
 							display: true,
-							labelString: 'Payouts',
-                            fontColor: 'rgba(255, 255, 255,1)'  
+							labelString: 'USD',
+                            fontColor: '#006400'
 						},
-                        gridLines: {
-                              display: false ,
-                              color: "rgba(255, 236, 202,1)"
-                            }
-                    
+                        ticks: {
+							display: true,
+                            fontFamily: 'Varela Round'
+						}                        
 					}]
 				},
 			}
@@ -203,21 +204,18 @@
     var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ["BTC","XMR","ETH","LTC","ZEC"],
+        labels: ["BTC","XMR","ETH"],
         datasets: [{
             label: 'Payouts',
             data: [
 						randomScalingFactor(),
 						randomScalingFactor(),
-						randomScalingFactor(),
-						randomScalingFactor(),                
 						randomScalingFactor()
 					],
             backgroundColor: [
                 'rgba(255, 179, 71, 1)',
                 'rgba(255, 105, 97, 1)',
-                'rgba(177, 156, 217, 1)',
-                'rgba(211, 211, 211, 1)',                
+                'rgba(177, 156, 217, 1)',                
             ],
             borderColor: [
                 'rgba(255, 165, 0, 1)',
@@ -226,15 +224,6 @@
         }]
     },
     options: {
-                legend: {
-                    display: false
-                 }, 
-        
-       title: {
-            display: true,
-            text: 'Daily Payout Breakdown',
-            fontColor: '#ffffff'
-        }        
     }
 });         
 </script>            

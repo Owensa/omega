@@ -14,8 +14,9 @@ html {
 body {
   font-size: 1.6rem;
     font-family: "Varela Round", sans-serif;
-  color: #3e454c;
-  background-color: #ffffff;
+  color: #fff;
+  background-image: -webkit-linear-gradient(right, #1b1c1f 0%, #1b1c20 100%);    
+  background-color: linear-gradient(to left, #1b1c1f 0%, #1b1c20 100%); 
 }
 body::after {
   clear: both;
@@ -99,10 +100,10 @@ Main Page Content
     text-align: left;   
   }
   .cd-main-content .content-wrapper k1 {
-    font-family: "Quicksand", sans-serif;      
+    font-family: "Roboto", sans-serif;      
     font-size: 10rem;
-    font-weight: 700;
-    color: #0097e6;    
+    font-weight: 400;
+    color: #ffc04b;    
   }
     
   .cd-main-content .content-wrapper f1 {
@@ -820,6 +821,7 @@ table caption {
 
 .Charts-child {
   flex: 1;
+    padding: 10px 20px 0 0;
 }
 
 .flex-parent {
@@ -837,4 +839,43 @@ list-style-type: none;
 
 li:nth-child(6) {
    list-style-type: none; 
+}
+
+.flex-container {
+    position: relative;
+    border-style: solid;
+    display: block;
+    border-width: 0px;
+    border-radius: 3px;
+    border-collapse: collapse;    
+    border-color: rgba(62,69,76,0.4);
+    box-shadow: 0px 2px 0 rgba(0,0,0,0.05);
+    background-color: #2a2a2a;
+    padding: 10px 25px 50px 45px;    
+}
+
+.flex-container2 {
+    position: relative;
+    border-style: solid;
+    display: block;
+    border-width: 0px;
+    border-radius: 3px;
+    border-collapse: collapse;    
+    border-color: rgba(62,69,76,0.4);
+    box-shadow: 0px 2px 0 rgba(0,0,0,0.05);
+    background-color: #2a2a2a;
+    padding: 25px 25px 25px 45px;   
+}
+
+.flex-container3 {
+    position: relative;
+    border-style: solid;
+    display: block;
+    border-width: 0px;
+    border-radius: 3px;
+    border-collapse: collapse;    
+    border-color: rgba(62,69,76,0.4);
+    box-shadow: 0px 2px 0 rgba(0,0,0,0.05);
+    background-color: #ffc04b;
+    padding: 10px 25px 50px 45px;   
 }
