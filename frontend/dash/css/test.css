@@ -45,7 +45,6 @@ td{
 body{
   background: -webkit-linear-gradient(left, #3e454c, #3e454c);
   background: linear-gradient(to right, #3e454c, #3e454c);
-  font-family: 'Roboto', sans-serif;
 }
 section{
   margin: 50px;

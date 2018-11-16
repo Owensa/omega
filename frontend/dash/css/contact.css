@@ -14,9 +14,8 @@ html {
 body {
   font-size: 1.6rem;
     font-family: "Varela Round", sans-serif;
-  color: #fff;
-background: -webkit-linear-gradient(left, #1b1c1f, #1b1c1f);    
-  background-color: linear-gradient(to right, #1b1c1f, #1b1c1f);
+  color: #3e454c;
+  background-color: #ffffff;
 }
 body::after {
   clear: both;
