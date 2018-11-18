@@ -42,8 +42,10 @@ $usernameError = "";
 $username = "";
 $password = "";
 $emailAddress = "";
+$token= "M15sH723fGNKF2zSuyLf6InY4IzMSKPm";
 $applicationServerIpAddress = "192.168.8.175";
 $applicationServerPort = "8082";
+$curl = curl_init();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") { 
     if(empty($_POST["username"])) { 
@@ -56,16 +58,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
     if(empty($_POST["email"])) { 
-        $usernameError = "Please enter your username.";
+        $usernameError = "Please enter your email.";
     } else 
     { 
     if($_POST["email"] == FALSE) { 
-        $usernameError = "Please enter a valid username";
+        $usernameError = "Please enter a valid email";
     }
     }
 
     echo $_POST["username"];
+
+    curl_setopt_array($curl, array(
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL = $applicationServerIpAddress:$applicationServerPort,
+        CURLOPT_USERAGENT => 'cURL Request',
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => array(
+            'username' => $_POST["username"],
+            'password' => $_POST["passord"],
+            'email' => $_POST["email"]
+            'token' => $token
+            ]
+        )
+    ))
 }
+
 ?>
 </body>
 </html>
