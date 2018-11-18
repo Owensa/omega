@@ -36,7 +36,6 @@
 
 </head>
 <body>
-Welcome 
 <?php 
 $usernameError = "";
 $username = "";
@@ -65,10 +64,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $usernameError = "Please enter a valid email";
     }
     }
-
     echo $_POST["username"];
 
-    curl_setopt_array($curl, array(
+    function RegisterUser() { 
+        curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER => 1,
         CURLOPT_URL = $applicationServerIpAddress:$applicationServerPort,
         CURLOPT_USERAGENT => 'cURL Request',
@@ -81,6 +80,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             ]
         )
     ))
+    }
+
+    function LoginUser() { 
+        curl_setopt_array($curl, array(
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL = $applicationServerIpAddress:$applicationServerPort,
+            CURLOPT_USERAGENT => 'cURL Request',
+            CURLOPT_GET => 1,
+            CURLOPT_GETFIELDS => array(
+                'username' => $_GET["username"],
+                'passord' => $_GET["passord"],
+                'token' => $token
+                ]
+            )
+        ))
+        }
+    }
 }
 
 ?>
