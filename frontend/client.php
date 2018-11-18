@@ -38,8 +38,12 @@
 <body>
 Welcome 
 <?php 
-echo $_POST["username"];
 $usernameError = "";
+$username = "";
+$password = "";
+$emailAddress = "";
+$applicationServerIpAddress = "192.168.8.175";
+$applicationServerPort = "8082";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") { 
     if(empty($_POST["username"])) { 
@@ -49,6 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if($_POST["username"] == FALSE) { 
         $usernameError = "Please enter a valid username";
     }
+
     }
     if(empty($_POST["email"])) { 
         $usernameError = "Please enter your username.";
@@ -58,6 +63,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $usernameError = "Please enter a valid username";
     }
     }
+
+    echo $_POST["username"];
 }
 ?>
 </body>
