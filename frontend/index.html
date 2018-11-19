@@ -79,22 +79,22 @@
                                         <!--register form-->
                                         <div class="login-form p-5">
                                             <h4 class="text-uppercase mt-0 text-purple-color text-center mb-5">Register</h4>
-                                            <form action=client.php method="POST" >
+                                            <form id="registerForm" action=http://192.168.8.175:9000/users method="POST" >
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" id="inputUser10" placeholder="Full Name">
+                                                    <input type="text" class="form-control" id="username" placeholder="Username">
                                                 </div>                                       
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" id="inputUser10" placeholder="E-mail">
+                                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
                                                 </div>
                                                 <div class="form-group mb-4">
-                                                    <input type="password" class="form-control" id="InputPassword10" placeholder="Password">
+                                                    <input type="password" class="form-control" id="password" placeholder="Password">
                                                 </div>
                                                 <div class="form-group mb-4">
-                                                    <input type="password" class="form-control" id="confirmPassword10" placeholder="Confirm Password">
+                                                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password">
                                                 </div>
 
                                                 <div class="form-group clearfix">
-                                                    <button type="submit" class="btn btn-purple float-right">Register</button>
+                                                    <button type="button" onclick="Register()" class="btn btn-purple float-right">Register</button>
                                                 </div>
 
                                                 <div class="text-center mt-5">
@@ -552,6 +552,44 @@ We never take custody of your wallet, so users are immune to these catastrophes.
       loopcount: Infinity,
       backSpeed: 100,
   });
+</script>
+<script>
+function Register() {     
+    var register = document.getElementById("registerForm");
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
+
+    if(!register.action) { 
+        return;
+    }
+    var request = new XMLHttpRequest();
+
+    if(register.method.toLowerCase() === "post") { 
+        request.open("post", register.action);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.onload = function() { 
+            if (request.status === 401) { 
+                var data = JSON.parse("The request is unauthorized: " + request.responseText);
+            }
+            if(request.status === 405) { 
+                var data = JSON.parse("The request failed for some reason: " + request.responseText);
+            }
+            if(request.status === 400) { 
+                var data = JSON.parse("The password limit is 6 characters." + request.responseText);
+            }
+            if(request.status === 201) { 
+                var data = JSON.parse("The request was successful. User created: " + request.responseText);
+                window.location = "http://192.168.8.175:8083/frontend/dash/dashboard.html";
+            }
+        }
+        request.send(JSON.stringify({ 
+            access_token: 'OIqGAR0ZiagicC6Xx0HwSGg6FkOwU9se',
+            email: email,
+            password: password
+        }));
+        }
+}
 </script>
 </body>
 </html>
