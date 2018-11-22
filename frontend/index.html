@@ -156,8 +156,6 @@
                             <li class="nav-item2">
                                  <a href="javascript:;" class="nav-link btn btn-pill login-token js-scroll-trigger" data-toggle="modal" data-target="#loginModal">Log In</a>
                             </li>
-                            
-                    
                         </ul>
                     </div>
                     <!--nav link-->
@@ -569,26 +567,23 @@ function Register() {
         request.open("post", register.action);
         request.setRequestHeader('Content-Type', 'application/json');
         request.onload = function() { 
-            if (request.status === 401) { 
-                var data = JSON.parse("The request is unauthorized: " + request.responseText);
-            }
-            if(request.status === 405) { 
-                var data = JSON.parse("The request failed for some reason: " + request.responseText);
+            console.log(request.status);
+            if(request.status === 201) { 
+                window.location.href = "http://192.168.8.175:8080/dash/dashboard.html";
             }
             if(request.status === 400) { 
-                var data = JSON.parse("The password limit is 6 characters." + request.responseText);
+                alert("That email address has already been registered.");
             }
-            if(request.status === 201) { 
-                var data = JSON.parse("The request was successful. User created: " + request.responseText);
-                window.location = "http://192.168.8.175:8083/frontend/dash/dashboard.html";
+            if(request.status === 409) { 
+                alert("Your password must be greater than 6 characters");
             }
         }
         request.send(JSON.stringify({ 
             access_token: 'OIqGAR0ZiagicC6Xx0HwSGg6FkOwU9se',
             email: email,
             password: password
-        }));
-        }
+        })); 
+    }
 }
 </script>
 </body>
