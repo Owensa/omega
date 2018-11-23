@@ -79,7 +79,7 @@
                                         <!--register form-->
                                         <div class="login-form p-5">
                                             <h4 class="text-uppercase mt-0 text-purple-color text-center mb-5">Register</h4>
-                                            <form id="registerForm" action=http://192.168.8.175:9000/users method="POST" >
+                                            <form id="registerForm" action=http://127.0.0.1:9000/users method="POST" >
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" id="username" placeholder="Username">
                                                 </div>                                       
@@ -569,7 +569,7 @@ function Register() {
         request.onload = function() { 
             console.log(request.status);
             if(request.status === 201) { 
-                window.location.href = "http://192.168.8.175:8080/dash/dashboard.html";
+                window.location.href = "http://127.0.0.1:8080/dash/dashboard.html";
             }
             if(request.status === 400) { 
                 alert("That email address has already been registered.");
